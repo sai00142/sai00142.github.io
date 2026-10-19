@@ -10,8 +10,8 @@
   --violet-bright: #c3adff;
   --cyan: #65e6db;
   --rose: #ef79ad;
-  --cloud: #171126;
-  --cloud-edge: #292044;
+  --cloud: #1d1533;
+  --cloud-edge: #3a2a5e;
   --line: rgba(164,129,255,.28);
   --max: 1180px;
 }
@@ -35,14 +35,14 @@ button { font: inherit; }
 .skip-link { position: fixed; z-index: 1000; left: 1rem; top: 1rem; transform: translateY(-180%); padding: .7rem 1rem; background: var(--cyan); color: var(--void); font-weight: 800; text-decoration: none; }
 .skip-link:focus { transform: none; }
 
-.world { position: fixed; z-index: -3; inset: 0; overflow: hidden; pointer-events: none; background: radial-gradient(circle at 68% 22%, rgba(86,49,139,.18), transparent 32%), linear-gradient(180deg, #050817 0%, #080b1b 57%, #0c0b1c 100%); }
-.noise { position: absolute; inset: 0; opacity: .16; background-image: linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px); background-size: 100% 4px; }
-.grid-horizon { position: absolute; left: -20%; right: -20%; bottom: -23%; height: 52%; transform: perspective(420px) rotateX(62deg); transform-origin: center top; opacity: .12; background-image: linear-gradient(var(--violet) 1px, transparent 1px), linear-gradient(90deg, var(--violet) 1px, transparent 1px); background-size: 54px 54px; -webkit-mask-image: linear-gradient(transparent, #000 25%, #000); mask-image: linear-gradient(transparent, #000 25%, #000); }
+.world { position: fixed; z-index: 0; inset: 0; overflow: hidden; pointer-events: none; background: radial-gradient(circle at 68% 22%, rgba(86,49,139,.22), transparent 32%), linear-gradient(180deg, #050817 0%, #080b1b 57%, #0c0b1c 100%); }
+.noise { position: absolute; inset: 0; opacity: .26; background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px); background-size: 100% 4px; }
+.grid-horizon { position: absolute; left: -20%; right: -20%; bottom: -23%; height: 52%; transform: perspective(420px) rotateX(62deg); transform-origin: center top; opacity: .22; background-image: linear-gradient(var(--violet) 1px, transparent 1px), linear-gradient(90deg, var(--violet) 1px, transparent 1px); background-size: 54px 54px; -webkit-mask-image: linear-gradient(transparent, #000 25%, #000); mask-image: linear-gradient(transparent, #000 25%, #000); }
 
 .cloud { position: absolute; width: 18px; height: 18px; color: var(--cloud); background: currentColor; box-shadow: 18px 0 currentColor,36px 0 currentColor,54px 0 currentColor,72px 0 currentColor,90px 0 currentColor,108px 0 currentColor,18px -18px currentColor,36px -18px currentColor,54px -18px currentColor,72px -18px currentColor,90px -18px currentColor,36px -36px currentColor,54px -36px currentColor,72px -36px currentColor; filter: drop-shadow(8px 8px 0 var(--cloud-edge)); animation: cloud-drift 34s linear infinite; opacity: .82; }
-.cloud-one { top: 15%; left: -13rem; transform: scale(1.3); }
+.cloud-one { top: 15%; left: -13rem; transform: scale(1.3); opacity: .96; }
 .cloud-two { top: 38%; left: -15rem; transform: scale(.72); animation-duration: 46s; animation-delay: -28s; opacity: .6; }
-.cloud-three { top: 67%; left: -14rem; transform: scale(1.02); animation-duration: 39s; animation-delay: -11s; opacity: .72; }
+.cloud-three { top: 67%; left: -14rem; transform: scale(1.02); animation-duration: 39s; animation-delay: -11s; opacity: .88; }
 .cloud-four { top: 7%; left: -12rem; transform: scale(.48); animation-duration: 52s; animation-delay: -39s; opacity: .5; }
 @keyframes cloud-drift { from { left: -15rem; } to { left: calc(100vw + 14rem); } }
 
@@ -58,6 +58,7 @@ button { font: inherit; }
 .menu-button { display: none; width: 44px; height: 44px; padding: 10px; border: 1px solid var(--line); background: transparent; color: var(--ink); }
 .menu-button > span:not(.sr-only) { display: block; height: 1px; margin: 5px 0; background: currentColor; }
 
+main { position: relative; z-index: 1; }
 .hero { min-height: 100svh; width: min(var(--max), calc(100% - 2.5rem)); margin: 0 auto; padding: 9rem 0 5rem; display: flex; flex-direction: column; justify-content: center; position: relative; }
 .hero-status { align-self: flex-start; display: flex; align-items: center; gap: .65rem; margin-bottom: 2.5rem; color: var(--muted); font: 700 .66rem "Courier New", monospace; letter-spacing: .1em; text-transform: uppercase; }
 .status-light { width: 8px; height: 8px; background: var(--cyan); box-shadow: 0 0 14px var(--cyan); animation: status-pulse 2.4s steps(2,end) infinite; }
@@ -136,7 +137,7 @@ button { font: inherit; }
 @keyframes orbit { to { transform: rotate(360deg); } }
 .contact > *:not(.contact-orbit) { position: relative; }
 
-.site-footer { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem max(1.25rem,calc((100vw - var(--max))/2)); border-top: 1px solid var(--line); color: var(--faint); font: 700 .6rem "Courier New",monospace; letter-spacing: .09em; }
+.site-footer { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem max(1.25rem,calc((100vw - var(--max))/2)); border-top: 1px solid var(--line); background: rgba(5,8,23,.86); color: var(--faint); font: 700 .6rem "Courier New",monospace; letter-spacing: .09em; position: relative; z-index: 1; }
 .site-footer a { color: var(--violet-bright); text-decoration: none; }
 
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }

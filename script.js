@@ -3,9 +3,6 @@ const siteNav = document.querySelector("#site-nav");
 const navLinks = [...siteNav.querySelectorAll("a")];
 const revealItems = [...document.querySelectorAll(".reveal")];
 const year = document.querySelector("#year");
-const mapReel = document.querySelector(".map-reel");
-const cityTooltip = document.querySelector(".city-tooltip");
-const cityPoints = [...document.querySelectorAll(".city-point")];
 
 menuButton.addEventListener("click", () => {
   const open = document.body.classList.toggle("menu-open");
@@ -36,21 +33,3 @@ if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-mot
 
 year.textContent = new Date().getFullYear();
 
-const showCity = (point) => {
-  if (!mapReel || !cityTooltip) return;
-  const pointBox = point.getBoundingClientRect();
-  const mapBox = mapReel.getBoundingClientRect();
-  cityTooltip.textContent = point.dataset.city;
-  cityTooltip.style.left = `${pointBox.left - mapBox.left + pointBox.width / 2}px`;
-  cityTooltip.style.top = `${pointBox.top - mapBox.top}px`;
-  cityTooltip.classList.add("is-visible");
-};
-
-const hideCity = () => cityTooltip?.classList.remove("is-visible");
-
-cityPoints.forEach((point) => {
-  point.addEventListener("pointerenter", () => showCity(point));
-  point.addEventListener("pointerleave", hideCity);
-  point.addEventListener("focus", () => showCity(point));
-  point.addEventListener("blur", hideCity);
-});

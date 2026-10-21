@@ -15,7 +15,7 @@
   <link rel="preload" as="image" href="cloud-medium.png?v=2" />
   <link rel="preload" as="image" href="cloud-wisps.png?v=2" />
   <link rel="preload" as="image" href="antique-world-map.png?v=1" />
-  <link rel="stylesheet" href="styles.css?v=7" />
+  <link rel="stylesheet" href="styles.css?v=8" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -109,72 +109,25 @@
     <section class="journey" id="journey" aria-labelledby="journey-title">
       <div class="journey-heading section">
         <div class="reveal">
-          <p class="eyebrow">A MIGRATION ATLAS</p>
-          <h2 id="journey-title">Routes of labour, learning, and return.</h2>
+          <p class="eyebrow">A MOVING GEOGRAPHY</p>
+          <h2 id="journey-title">Knowledge travels. Its value does not always travel with it.</h2>
         </div>
       </div>
 
-      <div class="map-reel reveal">
-        <img src="antique-world-map.png?v=1" alt="Antique parchment world map" />
+      <div class="map-reel reveal" role="img" aria-label="A tiny pixel car travelling continuously across a scrolling antique world map">
+        <div class="map-panorama" aria-hidden="true">
+          <img src="antique-world-map.png?v=1" alt="" />
+          <img src="antique-world-map.png?v=1" alt="" />
+        </div>
 
-        <svg class="route-overlay" viewBox="0 0 1942 809" role="img" aria-label="An illustrated migration map linking South Asia, the Gulf, Europe, North America, and East Asia">
-          <defs>
-            <filter id="point-glow" x="-500%" y="-500%" width="1000%" height="1000%">
-              <feGaussianBlur stdDeviation="4" result="blur" />
-              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
-            <marker id="arrow-gulf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8a6334"/></marker>
-            <marker id="arrow-europe" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#68466f"/></marker>
-            <marker id="arrow-america" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#346d70"/></marker>
-            <marker id="arrow-asia" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7d4058"/></marker>
-          </defs>
-
-          <g class="route-family routes-gulf" aria-label="Migration routes to the Gulf">
-            <path class="migration-route" marker-end="url(#arrow-gulf)" d="M1270 340 Q1210 300 1160 340"/>
-            <path class="migration-route" marker-end="url(#arrow-gulf)" d="M1270 340 Q1180 286 1105 345"/>
-            <path class="migration-route" marker-end="url(#arrow-gulf)" d="M1330 385 Q1234 298 1160 340"/>
-            <path class="migration-route" marker-end="url(#arrow-gulf)" d="M1330 385 Q1200 270 1105 345"/>
-            <path class="migration-route" marker-end="url(#arrow-gulf)" d="M1350 310 Q1240 265 1160 340"/>
-            <path class="migration-route" marker-end="url(#arrow-gulf)" d="M1400 350 Q1240 245 1105 345"/>
-          </g>
-
-          <g class="route-family routes-europe" aria-label="Migration routes to Europe">
-            <path class="migration-route" marker-end="url(#arrow-europe)" d="M1270 340 Q1110 155 940 215"/>
-            <path class="migration-route" marker-end="url(#arrow-europe)" d="M1330 385 Q1135 140 940 215"/>
-            <path class="migration-route" marker-end="url(#arrow-europe)" d="M1350 310 Q1160 118 940 215"/>
-            <path class="migration-route" marker-end="url(#arrow-europe)" d="M1400 350 Q1175 105 940 215"/>
-          </g>
-
-          <g class="route-family routes-america" aria-label="Migration routes to the United States and Canada">
-            <path class="migration-route" marker-end="url(#arrow-america)" d="M1270 340 C1080 60 710 65 480 200"/>
-            <path class="migration-route" marker-end="url(#arrow-america)" d="M1330 385 C1070 105 720 120 460 270"/>
-            <path class="migration-route" marker-end="url(#arrow-america)" d="M1350 310 C1115 42 720 45 480 200"/>
-            <path class="migration-route" marker-end="url(#arrow-america)" d="M1400 350 C1100 95 720 105 460 270"/>
-            <path class="migration-route reverse-route" marker-end="url(#arrow-america)" d="M460 270 C680 85 990 120 1160 340"/>
-            <path class="migration-route reverse-route" marker-end="url(#arrow-america)" d="M480 200 C720 42 1010 90 1160 340"/>
-          </g>
-
-          <g class="route-family routes-asia" aria-label="Migration routes on the Korean peninsula and from Nepal to South Korea">
-            <path class="migration-route" marker-end="url(#arrow-asia)" d="M1350 310 Q1475 225 1576 275"/>
-            <path class="migration-route" marker-end="url(#arrow-asia)" d="M1565 245 Q1582 255 1576 275"/>
-          </g>
-
-          <g class="city-point origin-point" data-city="Pakistan" tabindex="0" transform="translate(1270 340)"><title>Pakistan</title><circle class="city-halo" r="4"/><circle class="city-core" r="3"/></g>
-          <g class="city-point origin-point" data-city="India" tabindex="0" transform="translate(1330 385)"><title>India</title><circle class="city-halo" r="4"/><circle class="city-core" r="3"/></g>
-          <g class="city-point origin-point" data-city="Nepal" tabindex="0" transform="translate(1350 310)"><title>Nepal</title><circle class="city-halo" r="4"/><circle class="city-core" r="3"/></g>
-          <g class="city-point origin-point" data-city="Bangladesh" tabindex="0" transform="translate(1400 350)"><title>Bangladesh</title><circle class="city-halo" r="4"/><circle class="city-core" r="3"/></g>
-          <g class="city-point destination-point" data-city="United Arab Emirates" tabindex="0" transform="translate(1160 340)"><title>United Arab Emirates</title><circle class="city-halo" r="4"/><circle class="city-core" r="3"/></g>
-          <g class="city-point destination-point" data-city="Saudi Arabia" tabindex="0" transform="translate(1105 345)"><title>Saudi Arabia</title><circle class="city-halo" r="4"/><circle class="city-core" r="3"/></g>
-          <g class="city-point destination-point" data-city="Europe" tabindex="0" transform="translate(940 215)"><title>Europe</title><circle class="city-halo" r="4"/><circle class="city-core" r="3"/></g>
-          <g class="city-point destination-point" data-city="United States" tabindex="0" transform="translate(460 270)"><title>United States</title><circle class="city-halo" r="4"/><circle class="city-core" r="3"/></g>
-          <g class="city-point destination-point" data-city="Canada" tabindex="0" transform="translate(480 200)"><title>Canada</title><circle class="city-halo" r="4"/><circle class="city-core" r="3"/></g>
-          <g class="city-point dual-point" data-city="South Korea" tabindex="0" transform="translate(1576 275)"><title>South Korea</title><circle class="city-halo" r="4"/><circle class="city-core" r="3"/></g>
-          <g class="city-point origin-point" data-city="North Korea" tabindex="0" transform="translate(1565 245)"><title>North Korea</title><circle class="city-halo" r="4"/><circle class="city-core" r="3"/></g>
-        </svg>
-
-        <div class="city-tooltip" aria-hidden="true"></div>
-        <div class="migration-legend" aria-label="Migration route legend">
-          <span class="legend-gulf">Gulf</span><span class="legend-europe">Europe</span><span class="legend-america">North America</span><span class="legend-asia">East Asia</span>
+        <div class="pixel-car" aria-hidden="true">
+          <span class="car-roof"></span>
+          <span class="car-body"></span>
+          <span class="car-window car-window-one"></span>
+          <span class="car-window car-window-two"></span>
+          <span class="car-light"></span>
+          <span class="car-wheel car-wheel-one"></span>
+          <span class="car-wheel car-wheel-two"></span>
         </div>
       </div>
     </section>

@@ -11,7 +11,11 @@
   <meta property="og:url" content="https://sai00142.github.io/" />
   <link rel="canonical" href="https://sai00142.github.io/" />
   <title>Saira Salman — Education, Migration & Labor</title>
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="preload" as="image" href="cloud-large.png?v=2" />
+  <link rel="preload" as="image" href="cloud-medium.png?v=2" />
+  <link rel="preload" as="image" href="cloud-wisps.png?v=2" />
+  <link rel="preload" as="image" href="antique-world-map.png?v=1" />
+  <link rel="stylesheet" href="styles.css?v=5" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -39,12 +43,11 @@
   <div class="world" aria-hidden="true">
     <div class="star-field stars-far"></div>
     <div class="star-field stars-near"></div>
-    <div class="grid-horizon"></div>
-    <img class="cloud-layer cloud-large" src="cloud-large.png" alt="" />
-    <img class="cloud-layer cloud-medium" src="cloud-medium.png" alt="" />
-    <img class="cloud-layer cloud-wisps" src="cloud-wisps.png" alt="" />
-    <img class="cloud-layer cloud-medium cloud-medium-lower" src="cloud-medium.png" alt="" />
-    <img class="cloud-layer cloud-wisps cloud-wisps-lower" src="cloud-wisps.png" alt="" />
+    <img class="cloud-layer cloud-large" src="cloud-large.png?v=2" alt="" fetchpriority="high" />
+    <img class="cloud-layer cloud-medium" src="cloud-medium.png?v=2" alt="" />
+    <img class="cloud-layer cloud-wisps" src="cloud-wisps.png?v=2" alt="" />
+    <img class="cloud-layer cloud-medium cloud-medium-lower" src="cloud-medium.png?v=2" alt="" />
+    <img class="cloud-layer cloud-wisps cloud-wisps-lower" src="cloud-wisps.png?v=2" alt="" />
     <div class="noise"></div>
   </div>
 
@@ -60,6 +63,7 @@
 
     <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
       <a href="#about">About</a>
+      <a href="#journey">Journey</a>
       <a href="#research">Research</a>
       <a href="#methods">Methods</a>
       <a href="#contact">Contact</a>
@@ -75,30 +79,76 @@
 
       <div class="hero-layout">
         <div class="hero-copy reveal">
-          <p class="eyebrow">SYSTEMS / CREDENTIALS / PEOPLE</p>
-          <h1>I study what happens when knowledge crosses borders—<em>and institutions decide whether it counts.</em></h1>
-          <p class="lede">My research sits at the intersection of education, migration, and labor. I use economics and mixed methods to examine how rules, classifications, and institutions shape people’s opportunities.</p>
+          <p class="eyebrow">EDUCATION ECONOMICS × MIGRATION × LABOR</p>
+          <h1>I study how institutions decide what <em>knowledge</em> is worth.</h1>
+          <p class="lede">Drawing on education economics, migration and labor research, and comparative institutional analysis, I examine how credentials move across borders—and how their recognition shapes occupational access, mobility, and inequality.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#research">Explore the research <span aria-hidden="true">↘</span></a>
+            <a class="button button-primary" href="#research">Explore the research <span aria-hidden="true">→</span></a>
             <a class="button button-ghost" href="mailto:salma042@umn.edu">Start a conversation</a>
-            <span class="pixel-guide" aria-hidden="true"><i class="guide-arrow"></i><i class="guide-head"></i><i class="guide-body"></i></span>
           </div>
         </div>
 
-        <aside class="terminal reveal" aria-label="Current research profile">
-          <div class="terminal-bar"><span>research_profile.sh</span><i></i><i></i><i></i></div>
-          <div class="terminal-body">
-            <p><span class="prompt">$</span> current_focus</p>
-            <p class="terminal-output">credential recognition<br>migration + labor<br>education systems</p>
-            <p><span class="prompt">$</span> method_stack</p>
-            <p class="terminal-output">econometrics<br>mixed methods<br>institutional analysis</p>
-            <p><span class="prompt">$</span> orientation</p>
-            <p class="terminal-output accent-output">human-centered<span class="cursor">_</span></p>
+        <aside class="identity-column reveal" aria-label="Portrait and research profile">
+          <div class="portrait-frame" aria-label="Reserved space for Saira Salman's headshot">
+            <span class="portrait-placeholder" aria-hidden="true"></span>
+            <span class="portrait-label">HEADSHOT</span>
+          </div>
+
+          <div class="research-index">
+            <div class="index-heading"><span>RESEARCH INDEX</span><span>001</span></div>
+            <div class="index-entry"><small>QUESTION</small><span>Whose knowledge counts?</span></div>
+            <div class="index-entry"><small>FOCUS</small><span>Credentials across borders</span></div>
+            <div class="index-entry"><small>APPROACH</small><span>Econometrics + mixed methods</span></div>
           </div>
         </aside>
       </div>
 
       <div class="scroll-cue" aria-hidden="true"><span>SCROLL TO TRACE THE SIGNAL</span><i></i></div>
+    </section>
+
+    <section class="journey" id="journey" aria-labelledby="journey-title">
+      <div class="journey-heading section">
+        <div class="reveal">
+          <p class="eyebrow">AN INTELLECTUAL GEOGRAPHY</p>
+          <h2 id="journey-title">Places, questions, and routes of return.</h2>
+        </div>
+        <p class="journey-note reveal">THE ROUTE CONTINUES · THE ARROW REPEATS</p>
+      </div>
+
+      <div class="map-reel reveal">
+        <img src="antique-world-map.png?v=1" alt="Antique parchment world map" />
+
+        <svg class="route-overlay" viewBox="0 0 1942 809" role="img" aria-label="A travelling route from Karachi to Lahore, Cambridge, Minneapolis, Cairo, Jordan, Delhi, Faisalabad, and back to Karachi">
+          <defs>
+            <filter id="point-glow" x="-500%" y="-500%" width="1000%" height="1000%">
+              <feGaussianBlur stdDeviation="4" result="blur" />
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <path id="journey-path" class="journey-path-shadow" d="M1332 329 C1338 309 1355 294 1372 291 C1270 224 1091 143 972 174 C812 83 628 92 468 215 C645 164 920 180 1139 300 C1147 292 1156 288 1165 289 C1225 267 1327 276 1387 308 C1371 293 1355 288 1365 292 C1349 301 1337 314 1332 329" />
+          <path class="journey-path" d="M1332 329 C1338 309 1355 294 1372 291 C1270 224 1091 143 972 174 C812 83 628 92 468 215 C645 164 920 180 1139 300 C1147 292 1156 288 1165 289 C1225 267 1327 276 1387 308 C1371 293 1355 288 1365 292 C1349 301 1337 314 1332 329" />
+
+          <g class="city-point" data-city="Karachi" tabindex="0" transform="translate(1332 329)"><title>Karachi</title><circle class="city-halo" r="4"/><circle class="city-core" r="3"/></g>
+          <g class="city-point" data-city="Lahore" tabindex="0" transform="translate(1372 291)"><title>Lahore</title><circle class="city-halo" r="4"/><circle class="city-core" r="3"/></g>
+          <g class="city-point" data-city="Cambridge" tabindex="0" transform="translate(972 174)"><title>Cambridge</title><circle class="city-halo" r="4"/><circle class="city-core" r="3"/></g>
+          <g class="city-point" data-city="Minneapolis" tabindex="0" transform="translate(468 215)"><title>Minneapolis</title><circle class="city-halo" r="4"/><circle class="city-core" r="3"/></g>
+          <g class="city-point" data-city="Cairo" tabindex="0" transform="translate(1139 300)"><title>Cairo</title><circle class="city-halo" r="4"/><circle class="city-core" r="3"/></g>
+          <g class="city-point" data-city="Jordan" tabindex="0" transform="translate(1165 289)"><title>Jordan</title><circle class="city-halo" r="4"/><circle class="city-core" r="3"/></g>
+          <g class="city-point" data-city="Delhi" tabindex="0" transform="translate(1387 308)"><title>Delhi</title><circle class="city-halo" r="4"/><circle class="city-core" r="3"/></g>
+          <g class="city-point" data-city="Faisalabad" tabindex="0" transform="translate(1365 292)"><title>Faisalabad</title><circle class="city-halo" r="4"/><circle class="city-core" r="3"/></g>
+
+          <g class="travelling-arrow" aria-hidden="true">
+            <path d="M-13 -6 L8 0 L-13 6 L-7 0 Z" />
+            <animateMotion dur="20s" repeatCount="indefinite" rotate="auto">
+              <mpath href="#journey-path" />
+            </animateMotion>
+          </g>
+        </svg>
+
+        <div class="city-tooltip" aria-hidden="true"></div>
+        <p class="route-caption">Karachi → Lahore → Cambridge → Minneapolis → Cairo → Jordan → Delhi → Faisalabad → repeat</p>
+      </div>
     </section>
 
     <section class="manifesto section" id="about">

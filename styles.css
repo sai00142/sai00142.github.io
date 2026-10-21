@@ -103,19 +103,33 @@ main { position: relative; z-index: 1; }
 .map-reel::after { content: ""; position: absolute; z-index: 3; inset: 0; pointer-events: none; background: linear-gradient(180deg,rgba(5,8,23,.22),transparent 15%,transparent 85%,rgba(5,8,23,.28)); }
 .map-reel > img { display: block; width: 100%; height: auto; filter: sepia(.08) saturate(.78) brightness(.86) contrast(1.02); -webkit-mask-image: linear-gradient(180deg,transparent 0%,#000 9%,#000 91%,transparent 100%); mask-image: linear-gradient(180deg,transparent 0%,#000 9%,#000 91%,transparent 100%); }
 .route-overlay { position: absolute; z-index: 2; inset: 0; width: 100%; height: 100%; overflow: visible; }
-.journey-path-shadow { fill: none; stroke: rgba(46,26,43,.34); stroke-width: 8; stroke-linecap: round; }
-.journey-path { fill: none; stroke: #5a315f; stroke-width: 3.2; stroke-linecap: round; stroke-dasharray: 5 13; animation: route-flow 13s linear infinite; }
+.route-family { fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; opacity: .64; }
+.migration-route { stroke-dasharray: 7 13; animation: route-flow 15s linear infinite; }
+.migration-route:nth-child(2n) { animation-duration: 19s; animation-delay: -7s; }
+.migration-route:nth-child(3n) { animation-duration: 22s; animation-delay: -13s; }
+.routes-gulf { stroke: #8a6334; }
+.routes-europe { stroke: #68466f; }
+.routes-america { stroke: #346d70; }
+.routes-asia { stroke: #7d4058; stroke-width: 2.7; }
+.reverse-route { stroke-dasharray: 3 17; opacity: .78; }
 .city-point { cursor: help; outline: none; }
-.city-core { fill: #fff4cc; stroke: #5b3565; stroke-width: 2; filter: url(#point-glow); }
-.city-halo { fill: none; stroke: rgba(235,217,255,.9); stroke-width: 2; animation: city-pulse 2.8s ease-out infinite; }
+.city-core { fill: #fff4cc; stroke: #4b2c55; stroke-width: 2; filter: url(#point-glow); }
+.origin-point .city-core { fill: #f7c7d7; }
+.destination-point .city-core { fill: #c9f4e9; }
+.dual-point .city-core { fill: #d7ceff; }
+.city-halo { fill: none; stroke: rgba(255,245,212,.94); stroke-width: 2; animation: city-pulse 2.8s ease-out infinite; }
 .city-point:nth-of-type(2n) .city-halo { animation-delay: -1.3s; }
 .city-point:nth-of-type(3n) .city-halo { animation-delay: -.6s; }
 .city-point:focus .city-core { fill: white; stroke-width: 3; }
-.travelling-arrow { fill: #432247; stroke: #ffe8ad; stroke-width: 1.4; filter: url(#point-glow); }
-.route-caption { position: absolute; z-index: 5; left: max(1.25rem,calc((100vw - var(--max))/2)); bottom: 1.1rem; margin: 0; color: rgba(41,28,30,.76); font: italic clamp(.66rem,1.1vw,.86rem) Georgia,serif; text-shadow: 0 1px rgba(236,210,159,.65); }
+.migration-legend { position: absolute; z-index: 5; left: max(1.25rem,calc((100vw - var(--max))/2)); bottom: 1rem; display: flex; flex-wrap: wrap; gap: .65rem 1.1rem; padding: .55rem .7rem; color: rgba(41,28,30,.82); background: rgba(225,195,144,.46); border: 1px solid rgba(69,43,39,.18); backdrop-filter: blur(4px); font: 700 clamp(.55rem,.8vw,.66rem) "Courier New",monospace; letter-spacing: .07em; text-transform: uppercase; }
+.migration-legend span::before { content: ""; display: inline-block; width: 18px; height: 2px; margin: 0 .4rem .18rem 0; background: currentColor; }
+.legend-gulf { color: #6f4a1f; }
+.legend-europe { color: #5b315f; }
+.legend-america { color: #1f6064; }
+.legend-asia { color: #743149; }
 .city-tooltip { position: absolute; z-index: 8; transform: translate(-50%,-130%); padding: .35rem .55rem; opacity: 0; pointer-events: none; color: #f4e9d0; background: rgba(35,24,34,.9); border: 1px solid rgba(255,233,187,.5); font: 700 .6rem "Courier New",monospace; letter-spacing: .08em; text-transform: uppercase; transition: opacity .16s ease; }
 .city-tooltip.is-visible { opacity: 1; }
-@keyframes route-flow { to { stroke-dashoffset: -180; } }
+@keyframes route-flow { to { stroke-dashoffset: -200; } }
 @keyframes city-pulse { 0% { r: 4; opacity: .9; } 75%,100% { r: 14; opacity: 0; } }
 
 .scroll-cue { position: absolute; left: 0; bottom: 1.6rem; display: flex; align-items: center; gap: .8rem; color: var(--faint); font: 600 .58rem "Courier New", monospace; letter-spacing: .12em; }
